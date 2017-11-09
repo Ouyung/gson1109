@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onResponse(String response) {
                         Gson gson = new Gson();
                         Zoo z = gson.fromJson(response,Zoo.class);
-                        Log.d("Zoo",z.result.results[0].E_Name);
+                        Log.d("ZOO",z.result.results[0].E_Name);
                         adapter = new MyAdapter(MainActivity.this,z.result.results);
                         lv.setAdapter(adapter);
                     }
